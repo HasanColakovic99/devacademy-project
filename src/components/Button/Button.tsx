@@ -1,15 +1,12 @@
-import {ButtonContent, Button as ButtonWrapper, Image} from './ButtonStyle';
-import rightIcon from '../../assets/vector.jpg';
+import {Button as ButtonWrapper} from './ButtonStyle';
+import rightIcon from '../../assets/arrow.png';
 
-interface Props {
-    variant: string;
-    text: string;
-}
-
-const Button: React.FC<Props> = ({text, variant}) => {
+const Button = () => {
     return (
-        <ButtonWrapper variant={variant}>
-            {text}
+
+        <ButtonWrapper>
+            <button>button</button>
+            <img src={rightIcon}/>
         </ButtonWrapper>
     );
 }
