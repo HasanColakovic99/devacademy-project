@@ -52,4 +52,12 @@ export const Button = styled.button<{variant: string; rightIcon: boolean, leftIc
 export const Image = styled.img`
     width: 16px;
     height: 16px;
+
+    @media (min-width: 350px) {
+        display: none;
+    }
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
 `;

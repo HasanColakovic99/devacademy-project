@@ -1,21 +1,26 @@
-import {CardWrapper, Figure, Image, Title, Location, Price} from './AccommodationCardStyle';
-import CardImage from '../../assets/card.png';
+import {CardWrapper, Figure, Image, Title, Location, Price, Star} from './AccommodationCardStyle';
+import StarImage from '../../assets/star.png';
 
 interface Data {
+    imgSrc: string;
     title: string;
     location: string;
-    price: string;
+    price: number;
+    categorization: number;
 }
 
-const AccommodationCard: React.FC<Data> = ({title, location, price}) => {
+const AccommodationCard: React.FC<Data> = ({imgSrc, title, location, price, categorization}) => {
     return (
         <CardWrapper>
             <Figure>
-                <Image src={CardImage}/>
+                <Image src={imgSrc}/>
             </Figure>
             <Title>{title}</Title>
             <Location>{location}</Location>
-            <Price>{price}</Price>
+            <Price>EUR {price}</Price>
+            {[...Array(categorization)].map((index) => ( 
+                <Star key={index} src={StarImage}/>
+            ))}
         </CardWrapper>
     );
 }
