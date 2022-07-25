@@ -10,7 +10,7 @@ function App() {
     <>
       {/* <Navigation />
       <Header /> */}
-      <Button text={'button'} variant='isPrimary'/>
+      <Button text={'button'} variant='isSecondary' rightIcon={true}/>
     </>
   );
 }

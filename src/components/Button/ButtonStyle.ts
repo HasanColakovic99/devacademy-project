@@ -14,6 +14,10 @@ export const Button = styled.button<{variant: string; rightIcon: boolean, leftIc
     color: #FFFFFF;
     padding: 8px 22px;
 
+    &:active {
+        transform: scale(0.98);
+    }
+
     ${({variant}) => variant === 'isPrimary' && `
 
         &:hover {
