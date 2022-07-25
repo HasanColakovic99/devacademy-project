@@ -8,10 +8,7 @@ import { Grid } from './lib/GeneralStyles';
 function App() {
   return (
     <>
-      {/* <Navigation />
-      <Header /> */}
-      {/* <Button /> */}
-      <AccommodationCard title={'Sugar & Spice Apartments'} location={'Split'} price={'EUR 75'}/>
+      <Button text={'button'} variant='isPrimary' rightIcon={false} leftIcon={false}/>
     </>
   );
 }
