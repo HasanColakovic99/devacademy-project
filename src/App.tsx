@@ -8,7 +8,9 @@ import { Grid } from './lib/GeneralStyles';
 function App() {
   return (
     <>
-      <Button text={'button'} variant='isPrimary' rightIcon={false} leftIcon={false}/>
+      {/* <Navigation />
+      <Header /> */}
+      <Button text={'button'} variant='isPrimary'/>
     </>
   );
 }

@@ -14,11 +14,22 @@ export const Button = styled.button<{variant: string; rightIcon: boolean, leftIc
     color: #FFFFFF;
     padding: 8px 22px;
 
+    ${({variant}) => variant === 'isPrimary' && `
+
+        &:hover {
+            background: #1DB4A5;
+        }
+    `};
+
     ${({variant}) => variant === 'isSecondary' && `
         color: #40E0D0;
         padding: 0;
         box-shadow: none;
         background: #FFFFFF;
+
+        &:hover {
+            color: #1DB4A5;
+        }
     `};
 
     ${({rightIcon}) => rightIcon && `

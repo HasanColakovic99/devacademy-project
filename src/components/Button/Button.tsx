@@ -5,13 +5,17 @@ import leftArrow from '../../assets/leftArrow.png';
 interface Props {
     text: string;
     variant: string;
-    rightIcon: boolean;
-    leftIcon: boolean;
+    rightIcon?: boolean;
+    leftIcon?: boolean;
 }
 
 const Button: React.FC<Props> = ({text, variant, rightIcon, leftIcon}) => {
     return (
-        <ButtonWrapper variant={variant} rightIcon={rightIcon} leftIcon={leftIcon}>
+        <ButtonWrapper 
+            variant={variant} 
+            rightIcon={rightIcon ? rightIcon : false} 
+            leftIcon={leftIcon ? leftIcon : false}
+        >
             {leftIcon && <Image src={leftArrow}/>}
             {text}
             {rightIcon && <Image src={rightArrow}/>}

@@ -6,7 +6,7 @@ export const Header = styled.header`
 `;
 
 export const BackgroundImage = styled.img`
-    width: 100%;
+    width: 100vw;
     height: 274px;
 
     @media (min-width: 1024px) {
