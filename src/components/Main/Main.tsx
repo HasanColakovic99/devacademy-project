@@ -1,6 +1,7 @@
 import { useState } from "react";
-import accommodationsMock from "../../lib/mock/accommodations";
 import { Grid, Main } from "../../lib/style/GeneralStyles";
+import {MainWrapper} from './MainStyle';
+import accommodationsMock from "../../lib/mock/accommodations";
 import AccommodationCard from "../AccommodationCard/AccommodationCard";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -12,7 +13,7 @@ const MainPage = () => {
     const [accommodations, setAccommodations] = useState(accommodationsMock);
 
     return (
-        <div>
+        <MainWrapper>
             <Navigation />
             <Header />
             <Main>
@@ -31,7 +32,7 @@ const MainPage = () => {
                 </Section>
             </Main>
             <Footer />
-        </div>
+        </MainWrapper>
     );
 }
 
