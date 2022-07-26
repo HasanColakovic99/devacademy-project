@@ -4,6 +4,7 @@ export const Navigation = styled.nav`
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(205, 205, 205, 0.25);

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-    position: absolute;
-    top: 8%;
+    position: relative;
+    margin-top: 65px;
+    z-index: 0;
 `;
 
 export const BackgroundImage = styled.img`

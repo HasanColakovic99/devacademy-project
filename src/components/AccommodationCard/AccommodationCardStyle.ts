@@ -34,6 +34,7 @@ export const Star = styled.img`
     width: 20px;
     height: 19px;
     margin-right: 6px;
+    margin-bottom: 105px;
 `;
 
 export const Title = styled.h3`
