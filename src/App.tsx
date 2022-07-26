@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      {/* <MainPage /> */}
-      <Section title="All locations">
+      <MainPage />
+      {/* <Section title="All locations">
           <Grid>
             {citycards.map((citycard, index) => (
               <CityCard
@@ -24,7 +24,7 @@ function App() {
               />
             ))}
           </Grid>
-        </Section>
+        </Section> */}
     </>
   );
 }

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import {FaArrowRight as rightArrowIcon} from 'react-icons/fa';
+import {FaArrowLeft as leftArrowIcon} from 'react-icons/fa';
 
 export const Button = styled.button<{variant: string; rightIcon: boolean, leftIcon: boolean}>`
     background: #40E0D0;
@@ -49,14 +51,21 @@ export const Button = styled.button<{variant: string; rightIcon: boolean, leftIc
     `};
 `;
 
-export const Image = styled.img`
-    width: 16px;
-    height: 16px;
-
-    @media (min-width: 350px) {
-        display: none;
+export const RightArrow = styled(rightArrowIcon)`
+    width: 18px;
+    height: 18px;
+    display: none;
+    
+    @media (min-width: 1024px) {
+        display: block;
     }
+`;
 
+export const LeftArrow = styled(leftArrowIcon)`
+    width: 18px;
+    height: 18px;
+    display: none;
+    
     @media (min-width: 1024px) {
         display: block;
     }

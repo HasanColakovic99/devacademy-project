@@ -1,6 +1,4 @@
-import {Button as ButtonWrapper, Image} from './ButtonStyle';
-import rightArrow from '../../assets/rightArrow.png';
-import leftArrow from '../../assets/leftArrow.png';
+import {Button as ButtonWrapper, RightArrow, LeftArrow} from './ButtonStyle';
 
 interface Props {
     text: string;
@@ -16,9 +14,9 @@ const Button: React.FC<Props> = ({text, variant, rightIcon, leftIcon}) => {
             rightIcon={rightIcon ? rightIcon : false} 
             leftIcon={leftIcon ? leftIcon : false}
         >
-            {leftIcon && <Image src={leftArrow}/>}
+            {leftIcon && <LeftArrow />}
             {text}
-            {rightIcon && <Image src={rightArrow}/>}
+            {rightIcon && <RightArrow />}
         </ButtonWrapper>
     );
 }
