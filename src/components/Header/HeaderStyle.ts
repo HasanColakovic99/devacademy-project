@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
     position: relative;
-    margin-top: 65px;
     z-index: 0;
 `;
 

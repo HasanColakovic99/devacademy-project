@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import AccommodationDetails from './components/AccommodationDetails/AccommodationDetails';
 import CityCard from './components/CityCard/CityCard';
 import MainPage from './components/Main/Main';
 import Section from './components/Section/Section';
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-      <MainPage />
+      {/* <MainPage /> */}
       {/* <Section title="All locations">
           <Grid>
             {citycards.map((citycard, index) => (
@@ -25,6 +26,7 @@ function App() {
             ))}
           </Grid>
         </Section> */}
+        <AccommodationDetails />
     </>
   );
 }
