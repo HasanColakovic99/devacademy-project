@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {GiHamburgerMenu as HamburgerIcon} from 'react-icons/gi';
 
 export const Navigation = styled.nav`
     position: relative;
@@ -14,7 +15,18 @@ export const NavigationInner = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 76px;
+    padding: 4px 12px;
+
+    @media (min-width: 1024px) {
+        
+        padding: 16px 76px;
+    }
+`;
+
+export const Content = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 30px;
 `;
 
 export const LogoText = styled.h6`
@@ -24,6 +36,13 @@ export const LogoText = styled.h6`
     line-height: 32px;
     letter-spacing: 0.15px;
     color: #000000;
+`;
+
+export const Hamburger = styled(HamburgerIcon)`
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const NavigationLinks = styled.div`

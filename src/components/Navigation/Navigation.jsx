@@ -1,10 +1,13 @@
-import {Navigation as NavigationWrapper, NavigationInner, LogoText, NavigationLinks, Link, Logout} from './NavigationStyle';
+import {Navigation as NavigationWrapper, NavigationInner, Content, Hamburger, LogoText, NavigationLinks, Link, Logout} from './NavigationStyle';
 
 const Navigation = () => {
     return (
         <NavigationWrapper>
             <NavigationInner>
-                <LogoText>Staycation</LogoText>
+                <Content>
+                    <Hamburger />
+                    <LogoText>Staycation</LogoText>
+                </Content>
                 <NavigationLinks>
                     <Link>Locations</Link>
                     <Link>My places</Link>
