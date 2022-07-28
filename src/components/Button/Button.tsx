@@ -7,16 +7,16 @@ interface Props {
     leftIcon?: boolean;
 }
 
-const Button: React.FC<Props> = ({text, variant, rightIcon, leftIcon}) => {
+const Button: React.FC<Props> = (props) => {
     return (
         <ButtonWrapper 
-            variant={variant ? variant : 'isPrimary'} 
-            rightIcon={rightIcon ? rightIcon : false} 
-            leftIcon={leftIcon ? leftIcon : false}
+            variant={props.variant ? props.variant : 'isPrimary'} 
+            rightIcon={props.rightIcon ? props.rightIcon : false} 
+            leftIcon={props.leftIcon ? props.leftIcon : false}
         >
-            {leftIcon && <LeftArrow />}
-            {text}
-            {rightIcon && <RightArrow />}
+            {props.leftIcon && <LeftArrow />}
+            {props.text}
+            {props.rightIcon && <RightArrow />}
         </ButtonWrapper>
     );
 }

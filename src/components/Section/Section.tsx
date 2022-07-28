@@ -8,16 +8,16 @@ interface Props {
     children?: any;
 }
 
-const Section: React.FC<Props> = ({title, btnText, subtitle, children}) => {
+const Section: React.FC<Props> = (props) => {
     return (
         <SectionWrapper>
             <SectionInner>
                 <Heading>
-                    <Title>{title}</Title>
-                    {btnText && <Button text={btnText} variant='isSecondary' rightIcon/>}
+                    <Title>{props.title}</Title>
+                    {props.btnText && <Button text={props.btnText} variant='isSecondary' rightIcon/>}
                 </Heading>
-                {subtitle && <Subtitle>{subtitle}</Subtitle>}
-                {children}
+                {props.subtitle && <Subtitle>{props.subtitle}</Subtitle>}
+                {props.children}
             </SectionInner>
         </SectionWrapper>
     );

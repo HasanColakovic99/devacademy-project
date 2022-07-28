@@ -6,14 +6,14 @@ interface Data {
     properties: number;
 }
 
-const CityCard: React.FC<Data> = ({imgSrc, cityName, properties}) => {
+const CityCard: React.FC<Data> = (props) => {
     return (
         <CityCardWrapper>
-            <Image src={imgSrc}/>
+            <Image src={props.imgSrc}/>
             <Overlay />
             <Content>
-                <CityName>{cityName}</CityName>
-                <Properties>{properties} properties</Properties>
+                <CityName>{props.cityName}</CityName>
+                <Properties>{props.properties} properties</Properties>
             </Content>
         </CityCardWrapper>
     );
