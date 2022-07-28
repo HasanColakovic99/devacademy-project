@@ -30,7 +30,7 @@ const MainPage = () => {
                         ))}
                     </Grid>
                 </Section>
-                <Section title="My places">
+                <Section title="My places" isSecondary>
                     <Grid>
                         {placeCardsMock.map((place, index) => (
                         <PlaceCard
