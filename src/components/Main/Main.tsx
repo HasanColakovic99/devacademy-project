@@ -9,6 +9,8 @@ import AccommodationCard from "../AccommodationCard/AccommodationCard";
 import AccommodationDetails from "../AccommodationDetails/AccommodationDetails";
 import accommodationsMock from "../../lib/mock/accommodations";
 import cityCardsMock from "../../lib/mock/citycards";
+import placeCardsMock from "../../lib/mock/placecards";
+import PlaceCard from "../PlaceCard/PlaceCard";
 
 const MainPage = () => {
     return (
@@ -24,6 +26,19 @@ const MainPage = () => {
                             imgSrc={citycard.imgSrc}
                             cityName={citycard.name}
                             properties={citycard.count}
+                        />
+                        ))}
+                    </Grid>
+                </Section>
+                <Section title="My places">
+                    <Grid>
+                        {placeCardsMock.map((place, index) => (
+                        <PlaceCard
+                            key={index}
+                            imgSrc={place.imgSrc} 
+                            title={place.title} 
+                            location={place.location}
+                            subtitle={place.subtitle} 
                         />
                         ))}
                     </Grid>

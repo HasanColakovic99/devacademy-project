@@ -38,6 +38,17 @@ export const Button = styled.button<{variant: string; rightIcon: boolean, leftIc
         }
     `};
 
+    ${({variant}) => variant === 'isTernary' && `
+        color: #EF6B6B;;
+        padding: 0;
+        box-shadow: none;
+        background: #FFFFFF;
+
+        &:hover {
+            color: #BF5555;
+        }
+    `};
+
     ${({rightIcon}) => rightIcon && `
         display: flex;
         align-items: center;
