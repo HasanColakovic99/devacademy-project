@@ -7,6 +7,8 @@ export const CityCard = styled.div`
     
     @media (min-width: 1024px) {
         height: 295px;
+        margin-top: 41px;
+        margin-bottom: 85px;
     }
 `;
 

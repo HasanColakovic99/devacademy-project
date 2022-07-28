@@ -1,25 +1,36 @@
-import { useState } from "react";
 import { Grid, Main } from "../../lib/style/GeneralStyles";
 import {MainWrapper} from './MainStyle';
-import accommodationsMock from "../../lib/mock/accommodations";
-import AccommodationCard from "../AccommodationCard/AccommodationCard";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
 import Navigation from "../Navigation/Navigation";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import Section from "../Section/Section";
+import CityCard from "../CityCard/CityCard";
+import AccommodationCard from "../AccommodationCard/AccommodationCard";
+import AccommodationDetails from "../AccommodationDetails/AccommodationDetails";
+import accommodationsMock from "../../lib/mock/accommodations";
+import cityCardsMock from "../../lib/mock/citycards";
 
 const MainPage = () => {
-
-    const [accommodations, setAccommodations] = useState(accommodationsMock);
-
     return (
         <MainWrapper>
             <Navigation />
             <Header />
             <Main>
+                <Section title="All locations" btnText="view all locations">
+                    <Grid>
+                        {cityCardsMock.map((citycard, index) => (
+                        <CityCard
+                            key={index} 
+                            imgSrc={citycard.imgSrc}
+                            cityName={citycard.name}
+                            properties={citycard.count}
+                        />
+                        ))}
+                    </Grid>
+                </Section>
                 <Section title="Home guests love" btnText="view all homes">
                     <Grid>
-                        {accommodations.map((accommodation, index) => (
+                        {accommodationsMock.map((accommodation, index) => (
                         <AccommodationCard
                             key={index}
                             imgSrc={accommodation.imgSrc} 
@@ -31,6 +42,7 @@ const MainPage = () => {
                     </Grid>
                 </Section>
             </Main>
+            <AccommodationDetails />
             <Footer />
         </MainWrapper>
     );
