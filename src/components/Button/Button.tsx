@@ -1,15 +1,22 @@
-import {ButtonContent, Button as ButtonWrapper, Image} from './ButtonStyle';
-import rightIcon from '../../assets/vector.jpg';
+import {Button as ButtonWrapper, RightArrow, LeftArrow} from './ButtonStyle';
 
 interface Props {
-    variant: string;
     text: string;
+    variant?: string;
+    rightIcon?: boolean;
+    leftIcon?: boolean;
 }
 
-const Button: React.FC<Props> = ({text, variant}) => {
+const Button: React.FC<Props> = (props) => {
     return (
-        <ButtonWrapper variant={variant}>
-            {text}
+        <ButtonWrapper 
+            variant={props.variant ? props.variant : 'isPrimary'} 
+            rightIcon={props.rightIcon ? props.rightIcon : false} 
+            leftIcon={props.leftIcon ? props.leftIcon : false}
+        >
+            {props.leftIcon && <LeftArrow />}
+            {props.text}
+            {props.rightIcon && <RightArrow />}
         </ButtonWrapper>
     );
 }

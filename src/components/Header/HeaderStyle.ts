@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-    position: absolute;
-    top: 8%;
+    position: relative;
+    z-index: 0;
 `;
 
 export const BackgroundImage = styled.img`
-    width: 100%;
+    width: 100vw;
     height: 274px;
 
     @media (min-width: 1024px) {
