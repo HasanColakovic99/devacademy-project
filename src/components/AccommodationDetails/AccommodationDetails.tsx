@@ -1,7 +1,7 @@
 import {AccommodationDetailsWrapper, AccommodationDetailsInner, Image, RightContent, HotelData, HotelName, Stars, Star, Subtitle, CancelationDetails, Cancelation, Calendar, Description, LeftContent, PropertyInfo, LeftContentInner, Text} from './AccommodationDetailsStyle';
+import {getStars} from '../../helper/helpers';
 import BackgroundImage from '../../assets/accommodationdetails.svg';
 import Button from '../Button/Button';
-import getStars from '../../helper/GetStars';
 import StarImage from '../../assets/star.png';
 import accommodationDetailsMock from '../../lib/mock/accommodationdetails';
 

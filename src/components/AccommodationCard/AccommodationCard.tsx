@@ -1,6 +1,6 @@
 import {CardWrapper, Figure, Image, Title, Location, Price, Star} from './AccommodationCardStyle';
+import {getStars} from '../../helper/helpers';
 import StarImage from '../../assets/star.png';
-import getStars from '../../helper/GetStars';
 
 interface Data {
     imgSrc: string;
