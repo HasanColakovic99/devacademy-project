@@ -17,3 +17,44 @@ export const Main = styled.div`
     width: 100%;
     overflow: hidden;
 `;
+
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Input = styled.input`
+    border: 1px solid #CACACA;
+    border-radius: 4px;
+    height: 55px;
+    padding: 0px 12px;
+    margin-bottom: 20px;
+
+    ::-webkit-datetime-edit { 
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.15px;
+        color: #909090;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        font-weight: 400;
+        font-size: 16px;
+        color: #909090;
+    }
+
+    ::-webkit-datetime-edit-month-field { display: none; }
+    ::-webkit-datetime-edit-day-field { display: none; }
+    ::-webkit-datetime-edit-year-field { display: none; }
+
+    &::placeholder {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.15px;
+        color: #909090;
+    }
+`;

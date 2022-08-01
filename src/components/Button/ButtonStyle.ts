@@ -21,7 +21,7 @@ export const Button = styled.button<{variant: string; rightIcon: boolean, leftIc
     }
 
     ${({variant}) => variant === 'isPrimary' && `
-
+    
         &:hover {
             background: #1DB4A5;
         }
