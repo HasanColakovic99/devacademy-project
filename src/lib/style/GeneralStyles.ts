@@ -21,6 +21,10 @@ export const Main = styled.div`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 1024px) {
+        width: 510px;
+    }
 `;
 
 export const Input = styled.input`
@@ -39,15 +43,10 @@ export const Input = styled.input`
         color: #909090;
     }
 
-    ::-webkit-calendar-picker-indicator {
+    &::-webkit-calendar-picker-indicator {
         font-weight: 400;
-        font-size: 16px;
-        color: #909090;
+        font-size: 20px;
     }
-
-    ::-webkit-datetime-edit-month-field { display: none; }
-    ::-webkit-datetime-edit-day-field { display: none; }
-    ::-webkit-datetime-edit-year-field { display: none; }
 
     &::placeholder {
         font-family: 'Roboto';

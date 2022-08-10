@@ -1,24 +1,16 @@
-import {Form, Input} from '../../lib/style/GeneralStyles';
-import Button from '../Button/Button';
 import Section from '../Section/Section';
-import {Dates} from './ReservationStyle';
+import ReservationCard from './ReservationCard';
+import ReservationForm from './ReservationForm';
+import {Wrapper} from './ReservationStyle';
 
 const Reservation = () => {
     return (
-        <Form>
-            <Section title="Book your stay">
-                <Form>
-                    <Input type="text" placeholder="Full Name"/>
-                    <Input type="text" placeholder="Email address"/>
-                    <Input type="number" placeholder="Number of guests"/>
-                    <Dates>
-                        <Input type="date" placeholder="Check in"/>
-                        <Input type="date" placeholder="Check out" />
-                    </Dates>
-                    <Button text="Book your stay"/>
-                </Form>
-            </Section>
-        </Form>
+        <Section title="Book your stay">
+            <Wrapper>
+                <ReservationCard />
+                <ReservationForm />
+            </Wrapper>
+        </Section>
     );
 }
 
