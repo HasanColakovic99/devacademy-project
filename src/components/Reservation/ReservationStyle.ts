@@ -5,11 +5,13 @@ export const Wrapper = styled.div`
     flex-direction: column;
     gap: 24px;
     margin-top: 24px;
+    margin-bottom: 188px;
 
     @media (min-width: 1024px) {
         flex-direction: row-reverse;
         justify-content: space-between;
         margin-top: 45px;
+        margin-bottom: 360px;
         gap: 130px;
     }
 `;

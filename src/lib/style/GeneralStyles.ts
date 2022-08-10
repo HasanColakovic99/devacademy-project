@@ -56,4 +56,9 @@ export const Input = styled.input`
         letter-spacing: 0.15px;
         color: #909090;
     }
+
+    &:focus {
+        outline: none;
+        border: 1px solid #EF976B;
+    }
 `;
