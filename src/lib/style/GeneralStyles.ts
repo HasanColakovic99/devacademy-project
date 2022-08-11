@@ -44,8 +44,7 @@ export const Input = styled.input`
     }
 
     &::-webkit-calendar-picker-indicator {
-        font-weight: 400;
-        font-size: 20px;
+        display: none;
     }
 
     &::placeholder {

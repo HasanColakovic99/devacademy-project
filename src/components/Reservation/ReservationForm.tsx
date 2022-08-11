@@ -9,8 +9,18 @@ const ReservationForm = () => {
             <Input type="text" placeholder="Email address"/>
             <Input type="number" placeholder="Number of guests"/>
             <Dates>
-                <Input type="date" placeholder="Check in"/>
-                <Input type="date" placeholder="Check out" />
+                <Input 
+                    type="text" 
+                    onFocus={(e) => (e.target.type = "date")}  
+                    onBlur={(e) => (e.target.type = "text")}  
+                    placeholder="Check in"
+                />
+                <Input 
+                    type="text" 
+                    placeholder="Check out" 
+                    onFocus={(e) => (e.target.type = "date")}
+                    onBlur={(e) => (e.target.type = "text")}
+                />
             </Dates>
             <Button text="Book your stay"/>
         </Form>
