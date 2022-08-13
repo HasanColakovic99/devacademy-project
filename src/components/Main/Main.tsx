@@ -11,6 +11,7 @@ import accommodationsMock from "../../lib/mock/accommodations";
 import cityCardsMock from "../../lib/mock/citycards";
 import placeCardsMock from "../../lib/mock/placecards";
 import PlaceCard from "../PlaceCard/PlaceCard";
+import Reservation from "../Reservation/Reservation";
 
 const MainPage = () => {
     return (
@@ -58,6 +59,7 @@ const MainPage = () => {
                 </Section>
             </Main>
             <AccommodationDetails />
+            <Reservation />
             <Footer />
         </MainWrapper>
     );
